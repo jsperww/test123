@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+</head>
+<body>
+    <h1>index</h1>
+    <h3 th:text="'登录用户：'+${session.username}"></h3>
+    <a href="/logout">注销</a>
+    <br />
+    <form th:action="@{/emp/}+'2'" method="post">
+        <input type="hidden" name="_method" value="put" />
+        <button type="submit">请求</button>
+    </form>
+</body>
+</html>
